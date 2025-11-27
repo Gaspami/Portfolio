@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(background.png);
+    background-attachment: fixed;
+    margin: 0;
+    padding-top: 120px;
+    color: white;
+}
+html { 
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 70px;
+    background: rgba(28, 29, 33, 0.25);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    border-radius: 40px;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.acceuil {
+    margin: auto;
+    width: 60%;
+    height: 50vh;
+    background: rgba(28, 29, 33, 0.25);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.down {
+    width: 70%;
+    height: 100%;
+    background: rgba(28, 29, 33, 0.25);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.down h2 {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+}
+.down p {
+    font-size: 20px;
+    margin: 0;
+}
+.down img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.up {
+    margin-right: 20px;
+    width: 48%;
+    height: 100%;
+    background: rgba(28, 29, 33, 0.25);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.up img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.projet {
+    width: 80%;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.card {
+    width: 100%;
+    height: 250px;
+    background: rgba(28, 29, 33, 0.25);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+.card-content video {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card-content video:hover {
+    transform: scale(1.1);
+}
+
+.card-text {
+    width: 55%;
+    padding: 10px;
+}
+
+.card-text h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+
+.card-text p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.grand-rectangle {
+    width: 70%;
+    height: 65vh;
+    margin: 100px auto;
+    background: rgba(28, 29, 33, 0.25);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+    background: rgba(28, 29, 33, 0.25);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="#acceuil">Acceuil</a>
+    <a href="#projets">Projects</a>
+    <h1>Portfolio</h1>
+    <a href="#apropos">A propos</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="acceuil">
+    <div class="acceuil">
+        <div class="up">
+            <img src="IMG_20251024_174952_549.webp" alt="">
+        </div>
+        <div class="down">
+            <h2>Gaspard Milan</h2>
+            <p>Apprenant en développeur Full-Stack</p>
+            <p>depuis 3 mois</p>
+            <img src="html.png" alt="">
+            <img src="css-3.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="projets">
+    <div class="projet">
+        <!-- Left card -->
+        <div class="card">
+            <div class="card-content">
+                <video muted loop src="presentation.mp4"></video>
+                <div class="card-text">
+                    <h3>Septembre 2025</h3>
+                    <p>Premier code fait en html</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right card -->
+        <div class="card">
+            <div class="card-content">
+                <video muted loop src="diskair.mp4"></video>
+                <div class="card-text">
+                    <h3>Code commencé en début novembre 2025</h3>
+                    <p>projet immitant une vitrine demandé par notre professeur a présenter pour février 2026 .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="apropos">
+    <div class="grand-rectangle">
+        j'aime beaucoup l'art ( musique et dessin) <br>
+         et tout ce qui touche à l'informatique tels que les composants PC, la programmation etc. <br>
+    </div>
+</section>
+
+<section id="contact">
+<footer>
+    <p>© 2025 - Portfolio de Gaspard Milan</p>
+    <p>Numéro de contact: +32 493 08 73 82</p>
+    <p>Adresse Email: milangaspard1302@gmail.com</p>
+</footer>
+</section>
+
+<script>
+document.querySelectorAll('.card video').forEach(video => {
+    const parentCard = video.closest('.card');
+    parentCard.addEventListener('mouseenter', () => {
+        video.play();
+    });
+    parentCard.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+</script>
+
+</body>
+</html>
